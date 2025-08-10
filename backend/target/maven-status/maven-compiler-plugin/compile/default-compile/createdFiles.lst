@@ -1,0 +1,5 @@
+com/example/leavemanagement/service/LeaveService.class
+com/example/leavemanagement/controller/LeaveController.class
+com/example/leavemanagement/repository/LeaveRepository.class
+com/example/leavemanagement/model/Leave.class
+com/example/leavemanagement/LeavemanagementApplication.class
