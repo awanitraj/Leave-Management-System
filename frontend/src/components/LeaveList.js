@@ -6,7 +6,7 @@ const LeaveList = () => {
 
   const fetchLeaves = async () => {
     try {
-      const res = await axios.get('http://localhost:8080/api/leaves');
+      const res = await axios.get('http://localhost:8081/api/leaves');
       setLeaves(res.data);
     } catch (err) {
       console.error("Error fetching leaves:", err);
@@ -26,7 +26,7 @@ const LeaveList = () => {
         <ul>
           {leaves.map((leave) => (
             <li key={leave.id}>
-              <strong>{leave.employeeName}</strong> requested leave from <em>{leave.fromDate}</em> to <em>{leave.toDate}</em><br />
+              <strong>{leave.employeeName}</strong> requested leave from <em>{new Date(leave.fromDate).toLocaleDateString()}</em> to <em>{new Date(leave.toDate).toLocaleDateString()}</em><br />
               Reason: {leave.reason}
             </li>
           ))}

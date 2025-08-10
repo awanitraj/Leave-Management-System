@@ -16,7 +16,7 @@ const LeaveForm = ({ onLeaveSubmitted }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8080/api/leaves', leaveData);
+      await axios.post('http://localhost:8081/api/leaves', leaveData); // ✅ FIXED
       alert("Leave submitted successfully");
       setLeaveData({ employeeName: '', fromDate: '', toDate: '', reason: '' });
       onLeaveSubmitted();
